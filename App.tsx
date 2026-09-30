@@ -30,7 +30,7 @@ function AppContent() {
 
   return (
     <SafeAreaView style={styles.container} edges={['top', 'bottom', 'left', 'right']}>
-      <Text className='bg-red-600'>hello</Text>
+      <Text className='bg-red-600'>hellod</Text>
     </SafeAreaView>
   );
 }
