@@ -6,9 +6,11 @@
  */
 
 import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import { StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native';
 import {
+  SafeAreaInsetsContext,
   SafeAreaProvider,
+  SafeAreaView,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 
@@ -27,12 +29,9 @@ function AppContent() {
   const safeAreaInsets = useSafeAreaInsets();
 
   return (
-    <View style={styles.container}>
-      <NewAppScreen
-        templateFileName="App.tsx"
-        safeAreaInsets={safeAreaInsets}
-      />
-    </View>
+    <SafeAreaView style={styles.container} edges={['top', 'bottom', 'left', 'right']}>
+      <Text>hello</Text>
+    </SafeAreaView>
   );
 }
 
